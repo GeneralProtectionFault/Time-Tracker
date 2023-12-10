@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8kb0r1lprxi0"]
+
+[ext_resource type="Script" path="res://Main.cs" id="1_48qb5"]
+
+[node name="SceneRoot" type="Node2D"]
+script = ExtResource("1_48qb5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="EarliestDateLabel" type="Label" parent="CanvasLayer"]
+offset_left = 243.0
+offset_top = 16.0
+offset_right = 427.0
+offset_bottom = 39.0
+text = "Earliest Date to Display:"
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/EarliestDateLabel"]
+custom_minimum_size = Vector2(150, 35)
+layout_mode = 0
+offset_left = 197.0
+offset_top = -4.0
+offset_right = 347.0
+offset_bottom = 31.0
+text = "12/9/23"
+
+[node name="Button_Reload" type="Button" parent="CanvasLayer"]
+offset_left = 12.0
+offset_top = 7.0
+offset_right = 226.0
+offset_bottom = 49.0
+text = "Reoload Tasks (as of date)
+"
+
+[node name="Button_NewTask" type="Button" parent="CanvasLayer"]
+offset_left = 1378.0
+offset_top = 7.0
+offset_right = 1592.0
+offset_bottom = 49.0
+text = "Add New Job/task"
+
+[node name="Button_RemoveTask" type="Button" parent="CanvasLayer"]
+offset_left = 1159.0
+offset_top = 7.0
+offset_right = 1371.0
+offset_bottom = 46.0
+text = "Hide Selected Tasks"
+
+[node name="Button_RemoveAndDelTask" type="Button" parent="CanvasLayer"]
+offset_left = 785.0
+offset_top = 7.0
+offset_right = 1150.0
+offset_bottom = 46.0
+text = "Remove Selected And Delete Selected Records
+"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer"]
+offset_top = 70.0
+offset_right = 1605.0
+offset_bottom = 569.0
+scale = Vector2(1.00196, 1.16939)
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/ScrollContainer"]
+layout_mode = 2
+
+[connection signal="text_changed" from="CanvasLayer/EarliestDateLabel/TextEdit" to="." method="CheckDate"]
+[connection signal="pressed" from="CanvasLayer/Button_Reload" to="." method="ReloadGrid"]
+[connection signal="pressed" from="CanvasLayer/Button_NewTask" to="." method="ButtonAddNewTask"]
+[connection signal="pressed" from="CanvasLayer/Button_RemoveTask" to="." method="RemoveSelectedTasks" binds= [false]]
+[connection signal="pressed" from="CanvasLayer/Button_RemoveAndDelTask" to="." method="RemoveSelectedTasks" binds= [true]]

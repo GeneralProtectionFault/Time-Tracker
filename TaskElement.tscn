@@ -1,0 +1,122 @@
+[gd_scene load_steps=4 format=3 uid="uid://bv1q04ms1pjgy"]
+
+[ext_resource type="Script" path="res://TaskScript.cs" id="1_fkixb"]
+
+[sub_resource type="Gradient" id="Gradient_kbitn"]
+colors = PackedColorArray(6.73831e-07, 0.265376, 0.216641, 1, 3.56168e-06, 0.827197, 0.404297, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_llv1c"]
+gradient = SubResource("Gradient_kbitn")
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(1600, 50)
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(1, 0.9375)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(24.9695, 0.847271)
+texture = SubResource("GradientTexture2D_llv1c")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = -20.0
+offset_right = -12.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+script = ExtResource("1_fkixb")
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="JobHBox" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/JobHBox"]
+layout_mode = 2
+text = "Job"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/HBoxContainer/JobHBox"]
+custom_minimum_size = Vector2(175, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TaskHBox" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/TaskHBox"]
+layout_mode = 2
+text = "Task"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/HBoxContainer/TaskHBox"]
+custom_minimum_size = Vector2(175, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TimeHBox" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/TimeHBox"]
+layout_mode = 2
+text = "Time Elapsed:"
+
+[node name="TimeText" type="Label" parent="MarginContainer/HBoxContainer/TimeHBox"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="Button_Start" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "START"
+
+[node name="Button_Stop" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "STOP
+"
+
+[node name="CommentsHBox" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/CommentsHBox"]
+layout_mode = 2
+text = "Comments:"
+
+[node name="CommentsText" type="TextEdit" parent="MarginContainer/HBoxContainer/CommentsHBox"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DateHBox" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/DateHBox"]
+layout_mode = 2
+text = "Date:"
+
+[node name="DateText" type="Label" parent="MarginContainer/HBoxContainer/DateHBox"]
+custom_minimum_size = Vector2(175, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SecondTimer" type="Timer" parent="MarginContainer/HBoxContainer"]
+wait_time = 5.0
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Button_Start" to="MarginContainer/HBoxContainer" method="StartButton"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Button_Stop" to="MarginContainer/HBoxContainer" method="StopButton"]
+[connection signal="timeout" from="MarginContainer/HBoxContainer/SecondTimer" to="MarginContainer/HBoxContainer" method="UpdateTime"]

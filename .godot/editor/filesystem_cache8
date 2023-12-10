@@ -1,0 +1,10 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1702250429
+export_presets.cfg::TextFile::-1::1702168325::0::1::::<><>::
+icon.svg::CompressedTexture2D::4193076203077169640::1700491821::1700491821::1::::<><>::
+Main.cs::CSharpScript::-1::1702168140::0::1::::<>Node2D<>::
+Main.tscn::PackedScene::7109823280404654429::1702167933::0::1::::<><>::res://Main.cs
+TaskElement.tscn::PackedScene::3915077880997210848::1702167933::0::1::::<><>::res://TaskScript.cs
+TaskScript.cs::CSharpScript::-1::1702161056::0::1::::<>HBoxContainer<>::
+TrackerContext.cs::CSharpScript::-1::1702161137::0::1::::<><>::
+WorkTask.cs::CSharpScript::-1::1702096225::0::1::::<><>::
