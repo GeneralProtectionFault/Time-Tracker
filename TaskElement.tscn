@@ -12,12 +12,14 @@ gradient = SubResource("Gradient_kbitn")
 custom_minimum_size = Vector2(1600, 50)
 layout_mode = 3
 anchors_preset = 0
+offset_right = 1600.0
+offset_bottom = 50.0
 scale = Vector2(1, 0.9375)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 64.0
+offset_bottom = 64.0
 scale = Vector2(24.9695, 0.847271)
 texture = SubResource("GradientTexture2D_llv1c")
 

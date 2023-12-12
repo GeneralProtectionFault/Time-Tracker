@@ -63,7 +63,7 @@ public partial class TaskScript : HBoxContainer
 		if (jobNumber is null || taskNumber is null)
 			return;
 
-		var DbItem = GetTask(jobNumber, taskNumber);
+		var DbItem = GetTask(jobNumber, taskNumber, DateTime.Today);
 
 		if (DbItem is null)
 		{
@@ -119,9 +119,9 @@ public partial class TaskScript : HBoxContainer
 	}
 
 
-	private WorkTask GetTask(string jobNumber, string taskNumber)
+	private WorkTask GetTask(string jobNumber, string taskNumber, DateTime date)
 	{
-		var Task = Main.TrackerDbContext.Tasks.Where(x => x.JobNumber == jobNumber && x.TaskNumber == taskNumber).FirstOrDefault();
+		var Task = Main.TrackerDbContext.Tasks.Where(x => x.JobNumber == jobNumber && x.TaskNumber == taskNumber && x.Date == date).FirstOrDefault();
 		GD.Print($"Returning Task: {Task}");
 
 		return Task;
@@ -139,7 +139,7 @@ public partial class TaskScript : HBoxContainer
 	/// <param name="Date"></param>
 	private async void UpdateTask(string jobNumber, string taskNumber, string NewTime, string Comments, DateTime Date)
 	{
-		var DbItem = GetTask(jobNumber, taskNumber);
+		var DbItem = GetTask(jobNumber, taskNumber, Date);
 		if (DbItem is not null)
 		{
 			GD.Print($"Updating database...");

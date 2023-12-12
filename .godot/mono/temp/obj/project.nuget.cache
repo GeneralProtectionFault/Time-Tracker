@@ -1,13 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "+WUkgDhHYnWkgrNFapEqWmBvwvd4OVgT+MTX1MdfPstn98fMihYkEwC0g766HjF+7KfgDDo2k5QoOr4uzEEEWA==",
+  "dgSpecHash": "nLSpkL+0pnqpR0m8/uIlMekoXCwkFLSQMbZ1i5hg2rmls03qFBK9ESxzi0ooruD50WHguR6If4WKYttM7Crqlg==",
   "success": true,
   "projectFilePath": "C:\\Users\\luke.payne\\OneDrive - AECOM\\Documents\\Godot\\Time-Tracker\\Time Tracker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luke.payne\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\luke.payne\\.nuget\\packages\\godot.sourcegenerators\\4.2.0\\godot.sourcegenerators.4.2.0.nupkg.sha512",
     "C:\\Users\\luke.payne\\.nuget\\packages\\godotsharp\\4.2.0\\godotsharp.4.2.0.nupkg.sha512",
-    "C:\\Users\\luke.payne\\.nuget\\packages\\godotsharpeditor\\4.2.0\\godotsharpeditor.4.2.0.nupkg.sha512",
     "C:\\Users\\luke.payne\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\luke.payne\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\luke.payne\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
@@ -72,7 +71,10 @@
     "C:\\Users\\luke.payne\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\luke.payne\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\luke.payne\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512",
-    "C:\\Users\\luke.payne\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+    "C:\\Users\\luke.payne\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\luke.payne\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.0\\microsoft.netcore.app.runtime.win-x64.8.0.0.nupkg.sha512",
+    "C:\\Users\\luke.payne\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.0\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.0.nupkg.sha512",
+    "C:\\Users\\luke.payne\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.0\\microsoft.aspnetcore.app.runtime.win-x64.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }
